@@ -6,20 +6,40 @@
   <title>Cube Architects</title>
 
   <style>
-  video {
-    width: 100%;
-    height: 100%;
-    background: black;
-    object-fit: cover;
-  }
-
-  @media (orientation: portrait) {
-    video {
-      object-fit: contain;
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-  }
-</style>
 
+    html, body {
+      width: 100%;
+      height: 100%;
+      background: black;
+      overflow: hidden;
+    }
+
+    .video-wrapper {
+      position: fixed;
+      inset: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: black;
+    }
+
+    video {
+      width: 100%;
+      height: 100%;
+      max-width: 100vw;
+      max-height: 100vh;
+      object-fit: contain; /* 🔑 NO CROPPING */
+      background: black;
+    }
+  </style>
 </head>
 <body>
 
